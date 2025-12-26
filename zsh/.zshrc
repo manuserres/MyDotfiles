@@ -18,6 +18,16 @@ function super-save() {
     cd - > /dev/null
     echo "Everything is synced! 🚀"
 }
+# Cargar resaltado de sintaxis
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Cargar sugerencias automáticas
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Forzar colores en la terminal
+export TERM="xterm-256color"
+
+# Definir un prompt con algo de color (opcional, si quieres algo básico pero claro)
+PROMPT='%F{cyan}%n%f@%F{blue}%m%f %F{yellow}%~%f %# '
 # Alias para llamar a la función rápidamente
 alias save='super-save'
