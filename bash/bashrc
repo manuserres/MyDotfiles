@@ -1,0 +1,31 @@
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
+
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source ~/.local/share/omarchy/default/bash/rc
+
+# Add your own exports, aliases, and functions here.
+#
+# Make an alias for invoking commands you use constantly
+# alias p='python'
+#
+# # --- MIS CONFIGURACIONES PERSONALIZADAS ---
+
+# Inicializar Starship (el diseño del prompt)
+eval "$(starship init bash)"
+
+# Alias para facilitar el uso de la terminal
+alias save='super-save'
+
+# Función para automatizar el backup de mis dotfiles
+function super-save() {
+    echo "Pushing changes to GitHub..."
+    cd ~/mydotfiles
+    git add .
+    git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
+    git push
+    cd - > /dev/null
+    echo "Everything is synced! 🚀"
+
+  }
