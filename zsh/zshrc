@@ -1,0 +1,44 @@
+# --- Configuración del Historial ---
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=5000
+
+# --- Autocompletado inteligente ---
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+# Permite que el autocompletado sea sensible a mayúsculas/minúsculas
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# --- Plugins (Instalación automática) ---
+# Estos plugins te darán sugerencias en gris y colores en los comandos
+if [ ! -d ~/.zsh/zsh-autosuggestions ]; then
+    echo "Instalando zsh-autosuggestions..."
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+fi
+if [ ! -d ~/.zsh/zsh-syntax-highlighting ]; then
+    echo "Instalando zsh-syntax-highlighting..."
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+fi
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# --- Tus funciones personalizadas ---
+function super-save() {
+    echo "Pushing changes to GitHub..."
+    cd ~/mydotfiles
+    git add .
+    git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
+    git push
+    cd - > /dev/null
+    echo "Everything is synced! 🚀"
+}
+
+# --- Alias ---
+alias save='super-save'
+alias ll='ls -lah'
+alias c='clear'
+alias v='nvim'
+
+# --- STARSHIP (Sin cambios, tal cual te gusta) ---
+eval "$(starship init zsh)"
