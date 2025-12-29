@@ -9,8 +9,11 @@
     "format-disabled": "󰂲",
     "format-connected": "󰂱",
     "on-click": "omarchy-launch-bluetooth",
-    "tooltip-format": "{num_connections} connected"
-  },
+    "tooltip-format": "{num_connections} conectado(s)",
+    "tooltip-format-connected": "{num_connections} conectado(s)\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias}",
+    "tooltip-format-enumerate-connected-battery": " {device_alias} (󰥉 {device_battery_percentage}%)"
+},
 
   "network": {
     "format-wifi": "   {signalStrength}%",
@@ -65,7 +68,10 @@
 
   "hyprland/workspaces": {
     "format": "{icon}",
-    "on-click": "activate"
+    "on-click": "activate",
+    "persistent-workspaces": {
+        "*": 5
+    }
   },
 
   "hyprland/window": {
