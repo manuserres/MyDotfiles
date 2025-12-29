@@ -44,47 +44,58 @@ window#waybar {
 #battery,
 #clock,
 #custom-update {
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 7px;      /* Aumentamos para centrar verticalmente */
+    margin-bottom: 3px;   /* Exactamente igual al superior */
     margin-left: 6px;
     margin-right: 6px;
     padding-left: 8px;
     padding-right: 8px;
-    border-bottom: 2px solid transparent;
+    border-bottom: none;  /* Eliminamos el borde transparente que desvía el centro */
 }
 
 /* --- Colores y Subrayados específicos --- */
 #bluetooth {
     color: @blue;
-    border-bottom: 2px solid @blue;
+    /* border-bottom: 2px solid @blue; */
 }
 
 #network {
     color: @green;
-    border-bottom: 2px solid @green;
+    /* border-bottom: 2px solid @green; */
 }
 
 #pulseaudio {
     color: @yellow;
-    border-bottom: 2px solid @yellow;
+    /* border-bottom: 2px solid @yellow; */
 }
 
 #pulseaudio.muted {
     color: @red;
-    border-bottom-color: @red;
+    /* border-bottom-color: @red; */
 }
 
 #battery {
-    color: @sapphire;
-    border-bottom: 2px solid @green;
+    color: @mauve;
+    /* border-bottom: 2px solid @green; */
 }
 
 #clock {
     color: @pink;
-    border-bottom: 2px solid @pink;
+    /* border-bottom: 2px solid @pink; */
+}
+
+/* El nuevo botón de apagado (sin subrayado) */
+#custom-powermenu {
+    color: @red;
+    margin-top: 7px;      /* Igual que el resto */
+    margin-bottom: 3px;   /* Igual que el resto */
+    margin-left: 10px;
+    margin-right: 15px;
+    padding: 0 5px;
+    border-bottom: none;
 }
 
 #custom-update {
     color: @red;
-    border-bottom: 2px solid @red;
+    /* border-bottom: 2px solid @red; */
 }

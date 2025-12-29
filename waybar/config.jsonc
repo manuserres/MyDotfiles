@@ -2,7 +2,14 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window", "custom/update"],
-  "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
+  "modules-right": [
+    "battery",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "clock",
+    "custom/powermenu" // Este es el nuevo botón
+],
 
   "bluetooth": {
     "format": "",
@@ -64,6 +71,12 @@
       "on-click": "mode",
       "on-click-right": "shift_up"
     }
+  },
+
+  "custom/powermenu": {
+    "format": "", // Icono de shutdown
+    "on-click": "omarchy-menu system", // Llama directamente a tu submenú
+    "tooltip": false  
   },
 
   "hyprland/workspaces": {
