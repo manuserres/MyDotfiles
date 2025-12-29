@@ -43,6 +43,9 @@ alias v='nvim'
 # --- STARSHIP (Sin cambios, tal cual te gusta) ---
 eval "$(starship init zsh)"
 
+# --- Para dar prioridad a los scripts en mydotfiles ---
+export PATH="$HOME/mydotfiles/bin:$PATH" 
+
 # --- Función para Yazi ---
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
