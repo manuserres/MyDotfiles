@@ -52,7 +52,7 @@
   },
 
   "clock": {
-    "format": "   {:L%A %H:%M}",
+    "format": "   {:L%H:%M  %a %d}", // Modificado: Hora + Día semana corto + Día mes
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
