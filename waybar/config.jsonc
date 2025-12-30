@@ -12,9 +12,9 @@
 ],
 
   "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
+    "format": "",              // Bluetooth encendido (libre)
+    "format-disabled": "󰂲",     // Bluetooth apagado
+    "format-connected": "(  )",  // Bluetooth con dispositivos (ej. mando Xbox)
     "on-click": "omarchy-launch-bluetooth",
     "tooltip-format": "{num_connections} conectado(s)",
     "tooltip-format-connected": "{num_connections} conectado(s)\n\n{device_enumerate}",
