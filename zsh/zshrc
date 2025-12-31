@@ -23,6 +23,9 @@ fi
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# --- FZF (Buscador Difuso) ---
+source <(fzf --zsh)
+
 # --- Tus funciones personalizadas ---
 function super-save() {
     echo "Pushing changes to GitHub..."
