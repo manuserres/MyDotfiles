@@ -26,6 +26,11 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # --- FZF (Buscador Difuso) ---
 source <(fzf --zsh)
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
 # --- Tus funciones personalizadas ---
 function super-save() {
     echo "Pushing changes to GitHub..."
