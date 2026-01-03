@@ -47,6 +47,8 @@ alias save='super-save'
 alias ll='ls -lah'
 alias c='clear'
 alias v='nvim'
+# --- Actualiza Steam: sincroniza los repositorios, actualiza los paquetes y drivers, limpia los paquetes antiguos que ya no sirvan ---
+alias steamupdate='sudo pacman -Syu && sudo pacman -Sc --noconfirm'
 
 # --- STARSHIP (Sin cambios, tal cual te gusta) ---
 eval "$(starship init zsh)"
