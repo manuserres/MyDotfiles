@@ -43,12 +43,18 @@ function super-save() {
 }
 
 # --- Alias ---
+alias historialmako='tail -n 20 ~/mydotfiles/mako/historial.txt'
+
+# --- Alias Mejorados ---
 alias save='super-save'
-alias ll='ls -lah'
 alias c='clear'
 alias v='nvim'
-# --- Actualiza Steam: sincroniza los repositorios, actualiza los paquetes y drivers, limpia los paquetes antiguos que ya no sirvan ---
-alias steamupdate='sudo pacman -Syu && sudo pacman -Sc --noconfirm'
+
+# --- Alias Mejorados (Usando eza) ---
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -l --icons --group-directories-first --header'
+alias la='eza -la --icons --group-directories-first --header'
+alias lt='eza --tree --icons'
 
 # --- STARSHIP (Sin cambios, tal cual te gusta) ---
 eval "$(starship init zsh)"
