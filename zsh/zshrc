@@ -1,7 +1,12 @@
+# --- Control de duplicados en el PATH ---
+typeset -g -U path PATH  # Esto evita que se repitan rutas en el PATH
+
 # --- Configuración del Historial ---
-HISTSIZE=5000
+HISTSIZE=10000
 HISTFILE=~/.zsh_history
-SAVEHIST=5000
+SAVEHIST=10000
+setopt appendhistory
+# (He borrado la repetición que tenías arriba de 5000)
 
 # --- Autocompletado inteligente ---
 autoload -Uz compinit && compinit
@@ -25,11 +30,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # --- FZF (Buscador Difuso) ---
 source <(fzf --zsh)
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
 
 # --- Tus funciones personalizadas ---
 function super-save() {
