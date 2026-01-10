@@ -34,9 +34,10 @@
     "format": "{icon}   {volume}%",
     "format-muted": "  Muted",
     "format-icons": {
+      "headphone": "",
       "default": ["", "", ""]
     },
-    "on-click": "omarchy-launch-or-focus-tui wiremix",
+    "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t"
   },
 
