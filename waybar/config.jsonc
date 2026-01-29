@@ -7,6 +7,7 @@
     "bluetooth",
     "network",
     "pulseaudio",
+    "hyprland/language",
     "clock",
     "custom/powermenu" // Este es el nuevo botón
 ],
@@ -40,6 +41,14 @@
     "on-click": "omarchy-launch-audio",
     "on-click-right": "pamixer -t"
   },
+
+  "hyprland/language": {
+    "format": "󰌌  {}",
+    "format-en": "US",
+    "format-es": "ES",
+    "on-click": "hyprctl switchxkblayout all next",
+    "tooltip": false
+},
 
   "battery": {
     "states": {

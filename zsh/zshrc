@@ -49,6 +49,7 @@ alias historialmako='tail -n 20 ~/mydotfiles/mako/historial.txt'
 alias save='super-save'
 alias c='clear'
 alias v='nvim'
+alias gdu='gdu -i /proc,/dev,/sys,/run'
 
 # --- Alias Mejorados (Usando eza) ---
 alias ls='eza --icons --group-directories-first'

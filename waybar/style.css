@@ -42,6 +42,7 @@ window#waybar {
 #network,
 #pulseaudio,
 #battery,
+#language,
 #clock,
 #custom-update {
     margin-top: 7px;      /* Aumentamos para centrar verticalmente */
@@ -77,6 +78,10 @@ window#waybar {
 #battery {
     color: @mauve;
     /* border-bottom: 2px solid @green; */
+}
+
+#language {
+    color: @lavender;
 }
 
 #clock {
