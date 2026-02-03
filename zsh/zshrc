@@ -34,12 +34,22 @@ source <(fzf --zsh)
 # --- Tus funciones personalizadas ---
 function super-save() {
     echo "Pushing changes to GitHub..."
-    cd ~/mydotfiles
+    cd ~/mydotfiles || return
+
+    # Usamos el primer argumento ($1) si existe, si no, ponemos la fecha
+    local commit_message="${1:-Auto-update: $(date +'%Y-%m-%d %H:%M:%S')}"
+
     git add .
-    git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
-    git push
+    git commit -m "$commit_message"
+    
+    # Solo si el push tiene éxito, mostramos el cohete
+    if git push; then
+        echo "Everything is synced! 🚀"
+    else
+        echo "❌ Error: Push failed. Check your connection or SSH key."
+    fi
+
     cd - > /dev/null
-    echo "Everything is synced! 🚀"
 }
 
 # --- Alias ---
