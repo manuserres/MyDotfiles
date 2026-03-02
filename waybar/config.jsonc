@@ -36,6 +36,7 @@
     "format-muted": "  Muted",
     "format-icons": {
       "headphone": "",
+      "headset": "",
       "default": ["", "", ""]
     },
     "on-click": "omarchy-launch-audio",

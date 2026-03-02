@@ -36,3 +36,6 @@ mouse-scroll-multiplier = 0.95
 # Ventana transparente
 background-opacity = 0.85
 background-blur = true
+
+# Fix general slowness on hyprland (https://github.com/ghostty-org/ghostty/discussions/3224)
+async-backend = epoll
